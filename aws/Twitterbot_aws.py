@@ -51,8 +51,8 @@ def calc_aqi(x):
 def main():
     #----------Get the data via API----------
 
-    url="https://api.aqi.in/getexceldata"
-    payload={"serialno":"PLLODA000406", "time":"4", "slottype":"2"}
+    url=""
+    payload={"serialno":"", "time":"", "slottype":""}
     r=requests.get(url, headers=payload)
 
     jsondata=r.json()
@@ -165,8 +165,8 @@ def main():
 
     #----------LINE push----------
 
-    url = os.environ["https://notify-api.line.me/api/notify"]
-    access_token = os.environ["PtL9u0EOIYzU4RrQP6hxQkhpjKa1UxvAx6ugu4ztrUH"]
+    url = os.environ[""]
+    access_token = os.environ[""]
     headers = {'Authorization': 'Bearer ' + access_token}
 
     message = "Forecast on "+now
